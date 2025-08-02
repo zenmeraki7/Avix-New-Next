@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 import {
   Mail,
   Phone,
@@ -8,8 +8,7 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
-import avixlogo from "../../public/assets/AvixLogo.png";
-
+import Image from "next/image";
 const Footer = () => {
   const services = [
     { name: "Personal Loans", path: "/loans" },
@@ -35,7 +34,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
-                <img src={avixlogo} alt="AVIX Logo" className="w-10 h-10" />
+                <Image src={"/assets/AvixLogo.png"} alt="AVIX Logo" className="w-10 h-10" />
               </div>
               <span className="text-2xl font-bold">AVIX </span>
             </div>
@@ -70,7 +69,7 @@ const Footer = () => {
               {services.map((service) => (
                 <li key={service.name}>
                   <Link
-                    to={service.path}
+                    href={service.path}
                     className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200"
                   >
                     {service.name}
@@ -87,7 +86,7 @@ const Footer = () => {
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
-                    to={link.href}
+                    href={link.href}
                     className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200"
                   >
                     {link.name}
