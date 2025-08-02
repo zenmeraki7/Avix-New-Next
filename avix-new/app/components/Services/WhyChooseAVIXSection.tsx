@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+import { Button } from "../../components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "../../components/ui/card";
 import {
   Phone,
   Mail,
@@ -90,7 +90,7 @@ const WhyChooseAVIXSection = () => {
                   size="lg" 
                   asChild
                 >
-                  <Link to="/contact" className="flex items-center justify-center">
+                  <Link href="/contact" className="flex items-center justify-center">
                     <Users className="w-5 h-5 mr-2" />
                     Get Free Consultation
                   </Link>
@@ -100,7 +100,7 @@ const WhyChooseAVIXSection = () => {
                   size="lg" 
                   asChild
                 >
-                  <Link to="/calculator" className="flex items-center justify-center">
+                  <Link href="/calculator" className="flex items-center justify-center">
                     <Calculator className="w-5 h-5 mr-2" />
                     Calculate EMI
                   </Link>

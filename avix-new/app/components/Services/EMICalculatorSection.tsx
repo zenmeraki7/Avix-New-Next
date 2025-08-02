@@ -1,5 +1,5 @@
 import { Calculator } from "lucide-react";
-import EMICalculator from "@/components/Services/emi-calculator/EMICalculator";
+import EMICalculator from "../../components/Services/emi-calculator/EMICalculator";
 import styles from "../../styles/services/EMICalculatorSection.module.css";
 import "../../styles/avix.css";
 

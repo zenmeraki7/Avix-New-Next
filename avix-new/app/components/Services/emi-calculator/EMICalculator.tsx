@@ -1,12 +1,13 @@
+
 import { useState, useEffect } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Label } from '@/components/ui/label';
-import { Slider } from '@/components/ui/slider';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../../components/ui/card';
+import { Button } from '../../../components/ui/button';
+import { Label } from '../../../components/ui/label';
+import { Slider } from '../../../components/ui/slider';
 import { Calculator, Download, Share2 } from 'lucide-react';
 import styles from '../../../styles/services/emi-calculator/EMICalculator.module.css';
 import '../../../styles/avix.css';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const EMICalculator = () => {
   const [loanAmount, setLoanAmount] = useState([500000]);
@@ -17,8 +18,9 @@ const EMICalculator = () => {
   const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
-    calculateEMI();
-  }, [loanAmount, interestRate, tenure]);
+  calculateEMI();
+}, [loanAmount, interestRate, tenure,]);
+
 
   const calculateEMI = () => {
     const principal = loanAmount[0];
@@ -191,7 +193,7 @@ const EMICalculator = () => {
               </div>
             </div>
 
-            <Link to='/contact'>
+            <Link href='/contact'>
             <Button variant="secondary" className={styles.applyButton}>
               Apply for This Loan
             </Button>

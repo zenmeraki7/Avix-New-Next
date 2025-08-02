@@ -18,7 +18,7 @@ const HeroSection = () => {
           </h1>
           <p className={styles.heroSubtitle}>
             Comprehensive financial solutions tailored to meet your diverse
-            needs. From personal loans to investment financing, we've got you
+            needs. From personal loans to investment financing, we have got you
             covered.
           </p>
           <div className={styles.heroFeatures}>

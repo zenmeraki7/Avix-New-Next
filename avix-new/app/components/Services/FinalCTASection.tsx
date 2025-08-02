@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+import { Button } from "../../components/ui/button";
 import { Star, ArrowRight } from "lucide-react";
 import styles from "../../styles/services/FinalCTASection.module.css";
 import "../../styles/avix.css";
@@ -28,7 +28,7 @@ const FinalCTASection = () => {
           size="lg" 
           asChild
         >
-          <Link to="/contact" className="flex items-center">
+          <Link href="/contact" className="flex items-center">
             Contact Our Experts
             <ArrowRight className="w-6 h-6 ml-3" />
           </Link>
