@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Button } from "../ui/button";
 import { Calculator } from "lucide-react";
-import styles from "../../styles/home/CTASection.module.css";
-import "../../styles/avix.css";
+import styles from "../../../src/styles/home/CTASection.module.css";
+import "../../../src/styles/avix.css";
 
 const CTASection = () => {
   return (

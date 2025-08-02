@@ -2,10 +2,10 @@ import { useMemo } from "react";
 import {
   Card,
   CardContent,
-} from "@/components/ui/card";
+} from "../ui/card";
 import { Star } from "lucide-react";
-import styles from "../../styles/home/TestimonialsSection.module.css";
-import "../../styles/avix.css";
+import styles from "../../../src/styles/home/TestimonialsSection.module.css";
+import "../../../src/styles/avix.css";
 
 const TestimonialsSection = () => {
   const testimonials = useMemo(

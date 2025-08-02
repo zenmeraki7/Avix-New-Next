@@ -67,13 +67,15 @@ const Header = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-indigo-900 via-purple-800 to-pink-700 p-1 shadow-lg">
+              <div className="relative w-12 h-12 rounded-xl bg-gradient-to-tr from-indigo-900 via-purple-800 to-pink-700 p-1 shadow-lg">
                 <Image
                   src="/assets/AvixLogo.png"
                   alt="AVIX Logo"
-                  className="w-full h-full object-contain"
+                  fill
+                  className="object-contain"
                 />
               </div>
+
               <div className="flex flex-col">
                 <span className="text-2xl font-bold">AVIX</span>
                 <span className="text-xs text-gray-500 hidden sm:block">
@@ -116,7 +118,11 @@ const Header = () => {
                 size="sm"
                 onClick={() => setIsOpen(!isOpen)}
               >
-                {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {isOpen ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <Menu className="w-5 h-5" />
+                )}
               </Button>
             </div>
           </div>
