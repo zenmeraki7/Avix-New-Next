@@ -1,8 +1,8 @@
 import { useMemo } from "react";
-import { Link } from "react-router-dom";
+import  Link  from "next/link";
 import { CheckCircle, Phone, Calculator } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "../../components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card";
 import styles from "../../styles/investment/WhyInvestSection.module.css";
 import "../../styles/avix.css";
 
@@ -57,10 +57,10 @@ const WhyInvestSection = () => {
               </div>
               <div className={styles.contactButtons}>
                 <Button className="w-full avix-button-secondary hover:avix-button-secondary" size="lg" asChild>
-                  <Link to="/contact">Get Free Consultation</Link>
+                  <Link href="/contact">Get Free Consultation</Link>
                 </Button>
                 <Button className="w-full bg-white/20 hover:bg-white/30 text-white border-white/30" size="lg" asChild>
-                  <Link to="/calculator">
+                  <Link href="/calculator">
                     <Calculator className="w-5 h-5 mr-2" />
                     Calculate Returns
                   </Link>

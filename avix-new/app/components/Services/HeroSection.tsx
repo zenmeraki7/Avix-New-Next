@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+import { Button } from "../../components/ui/button";
 import {
   Calculator,
   ArrowRight,
@@ -48,7 +48,7 @@ const HeroSection = () => {
             size="lg" 
             asChild
           >
-            <Link to="/calculator" className="flex items-center">
+            <Link href="/calculator" className="flex items-center">
               <Calculator className="w-5 h-5 mr-2" />
               Calculate EMI
             </Link>
@@ -59,7 +59,7 @@ const HeroSection = () => {
             size="lg" 
             asChild
           >
-            <Link to="/contact" className="flex items-center">
+            <Link href="/contact" className="flex items-center">
               Get Free Consultation
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>

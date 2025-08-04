@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import  Link  from "next/link";
+import { Button } from "../../components/ui/button";
 import { Users, Target } from "lucide-react";
 import styles from "../../styles/msme/CTASection.module.css";
 import "../../styles/avix.css";
@@ -17,13 +17,13 @@ const CTASection = () => {
         </p>
         <div className={styles.ctaButtons}>
           <Button asChild className={styles.ctaPrimaryButton}>
-            <Link to="/contact">
+            <Link href="/contact">
               <Users className="w-5 h-5 mr-2 text-blue-600" />
               Talk to Expert
             </Link>
           </Button>
           <Button asChild variant="outline" className={styles.ctaSecondaryButton}>
-            <Link to="/calculator">
+            <Link href="/calculator">
               <Target className="w-5 h-5 mr-2 text-yellow-300" />
               Calculate EMI
             </Link>

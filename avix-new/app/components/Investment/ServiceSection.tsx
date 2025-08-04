@@ -1,14 +1,14 @@
 import { FC, memo, useMemo } from "react";
 import { TrendingUp, PieChart, CheckCircle, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { InvestmentService, InvestmentCardProps } from "@/types/investment";
+} from "../../components/ui/card";
+import { InvestmentService, InvestmentCardProps } from "../../../src/types/investment";
 import styles from "../../styles/investment/ServiceSection.module.css";
 import "../../styles/avix.css";
 

@@ -13,9 +13,9 @@ import {
   Category,
   MSMEServiceCardProps,
   CategorySectionProps,
-} from "@/types/msme";
+} from "../../../src/types/msme";
 import styles from "../../styles/msme/ServiceGrid.module.css";
-import { Link } from "react-router-dom";
+import  Link  from "next/link";
 
 const MSMEServiceCard: FC<MSMEServiceCardProps> = memo(({ service, index }) => {
   const isPopular = service.popular;
@@ -64,7 +64,7 @@ const MSMEServiceCard: FC<MSMEServiceCardProps> = memo(({ service, index }) => {
         <div className={styles.serviceAmount}>
           Amount: <span>{service.amount}</span>
         </div>
-        <Link to={'/contact'}>
+        <Link href={'/contact'}>
           <button className={styles.serviceButton}>
             Apply Now
             <TrendingUp className={styles.serviceButtonIcon} />

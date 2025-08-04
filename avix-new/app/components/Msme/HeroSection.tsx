@@ -6,7 +6,7 @@ import {
   Award,
   CheckCircle,
 } from "lucide-react";
-import { Stat } from "@/types/msme";
+import { Stat } from "../../../src/types/msme";
 import styles from "../../styles/msme/HeroSection.module.css";
 import "../../styles/avix.css";
 

@@ -1,5 +1,5 @@
 import React, { FC, memo, useMemo } from "react";
-import { Link } from "react-router-dom";
+import  Link  from "next/link";
 import {
   CreditCard,
   Car,
@@ -11,7 +11,7 @@ import {
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
-import { Service, ServiceCardProps } from "@/types/loans";
+import { Service, ServiceCardProps } from "../../../src/types/msme";
 import styles from "../../styles/loans/ServiceGrid.module.css";
 
 const ServiceCard: FC<ServiceCardProps> = memo(({ service, index }) => (
@@ -52,7 +52,7 @@ const ServiceCard: FC<ServiceCardProps> = memo(({ service, index }) => (
         Amount:{" "}
         <span>{service.amount}</span>
       </div>
-      <Link to="/Contact" className={styles.serviceButton}>
+      <Link href="/Contact" className={styles.serviceButton}>
         Apply Now
         <ArrowRight className={styles.serviceButtonIcon} />
       </Link>
