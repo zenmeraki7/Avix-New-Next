@@ -4,14 +4,13 @@ import { Button } from "../ui/button";
 import { ArrowRight, Calculator } from "lucide-react";
 import styles from "../../../src/styles/home/HeroSection.module.css";
 import "../../../src/styles/avix.css";
-
 const HeroSection = () => {
   return (
     <section className={styles.heroSection}>
       <div
         className={styles.heroBackground}
         style={{
-          backgroundImage: `url("/assets/bg.png)`,
+          backgroundImage: `url("/assets/bg.png")`,
         }}
       >
         <div className={`${styles.heroOverlay} avix-gradient-primary`} />

@@ -173,7 +173,8 @@ const ServicesSection = () => {
           "24/7 claims assistance support",
         ],
         icon: Shield,
-        link: "/insurence", // (optional) fix typo if intended: "/insurance"
+        link: "/insurance",
+
         badge: "Up to ₹1 Cr",
         startingRate: "₹999/year",
         popular: true,
