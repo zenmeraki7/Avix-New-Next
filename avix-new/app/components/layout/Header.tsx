@@ -62,7 +62,7 @@ const Header = () => {
       )}
 
       {/* Main Header */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b">
+      <header className="sticky top-0 z-10 bg-white/95 backdrop-blur border-b">
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
