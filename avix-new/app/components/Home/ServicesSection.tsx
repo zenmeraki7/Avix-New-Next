@@ -1,12 +1,14 @@
-import  Link  from "next/link";
-import { Button } from "@/components/ui/button";
+
+import Link  from "next/link";
+import { Button } from "../ui/button";
+
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "../ui/card";
 import {
   CreditCard,
   TrendingUp,
@@ -19,8 +21,8 @@ import {
   Clock,
 } from "lucide-react";
 import { memo, useMemo } from "react";
-import styles from "../../styles/home/ServicesSection.module.css";
-import "../../styles/avix.css";
+import styles from "../../../src/styles/home/ServicesSection.module.css";
+import "../../../src/styles/avix.css";
 
 // Memoized Modern Service Card Component with AVIX Theme
 const ModernServiceCard = memo(
@@ -88,7 +90,7 @@ const ModernServiceCard = memo(
                           className="group bg-[#8A1C9D] text-white border-[#8A1C9D] hover:bg-white hover:text-[#8A1C9D] transition-colors duration-200"
 
             >
-              <Link to={service.link}>
+              <Link href={service.link}>
                 Explore
                 <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
@@ -209,7 +211,7 @@ const ServicesSection = () => {
             asChild
             className="group bg-[#8A1C9D] text-white border-[#8A1C9D] hover:bg-white hover:text-[#8A1C9D] transition-colors duration-200"
           >
-            <Link to="/services">
+            <Link href ="/services">
               View All Services
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
