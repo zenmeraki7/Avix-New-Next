@@ -4,6 +4,8 @@ import { Button } from "../../components/ui/button";
 import styles from "../../styles/insurance/CTASection.module.css";
 import "../../styles/avix.css";
 
+
+
 const CTASection = () => {
   return (
     <section className={`${styles.ctaSection} avix-gradient-primary`}>

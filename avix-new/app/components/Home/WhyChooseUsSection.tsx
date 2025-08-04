@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import  Link  from "next/link";
+import { Button } from "../../components/ui/button";
 import { CheckCircle } from "lucide-react";
 import familyImage from "../../public/assets/family.png";
 import styles from "../../styles/home/WhyChooseUsSection.module.css";
@@ -37,7 +37,7 @@ const WhyChooseUsSection = () => {
             </div>
             <div className={styles.whyChooseUsButton}>
               <Button className="avix-button-secondary hover:avix-button-secondary" size="lg" asChild>
-                <Link to="/about">Learn More About Us</Link>
+                <Link href="/about">Learn More About Us</Link>
               </Button>
             </div>
           </div>

@@ -4,6 +4,9 @@ import { Calculator } from "lucide-react";
 import styles from "../../styles/home/CTASection.module.css";
 import "../../styles/avix.css";
 
+
+
+
 const CTASection = () => {
   return (
     <section className={`${styles.ctaSection} avix-gradient-primary`}>
