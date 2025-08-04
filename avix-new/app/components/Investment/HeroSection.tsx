@@ -1,7 +1,7 @@
 import { FC, memo, useMemo } from "react";
 import { Star } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Stat, StatCardProps } from "@/types/investment";
+import { Card, CardContent } from "../../components/ui/card";
+import { Stat, StatCardProps } from "../../../src/types/investment";
 import styles from "../../styles/investment/HeroSection.module.css";
 import "../../styles/avix.css";
 
@@ -44,7 +44,7 @@ const HeroSection = () => {
 
         <p className={styles.heroSubtitle}>
           Transform your financial future with our comprehensive investment services. 
-          From SIPs to expert portfolio guidance — we've got you covered.
+          From SIPs to expert portfolio guidance — we have got you covered.
         </p>
 
         <div className={styles.statsGrid}>

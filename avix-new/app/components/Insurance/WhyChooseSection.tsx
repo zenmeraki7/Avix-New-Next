@@ -1,14 +1,14 @@
 import { useMemo } from "react";
-import { Link } from "react-router-dom";
+import  Link  from "next/link";
 import { CheckCircle, Phone, Calculator } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "../../components/ui/card";
 import styles from "../../styles/insurance/WhyChooseSection.module.css";
 import "../../styles/avix.css";
 
@@ -69,14 +69,14 @@ const WhyChooseSection = () => {
                   size="lg"
                   asChild
                 >
-                  <Link to="/contact">Get Consultation</Link>
+                  <Link href="/contact">Get Consultation</Link>
                 </Button>
                 <Button
                   className="w-full bg-white/20 hover:bg-white/30 text-white border-white/30"
                   size="lg"
                   asChild
                 >
-                  <Link to="/contact">
+                  <Link href="/contact">
                     <Calculator className="w-5 h-5 mr-2" />
                     Get Insurance Quote
                   </Link>

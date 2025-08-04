@@ -1,5 +1,5 @@
 import { FC, memo, useMemo } from "react";
-import { Link } from "react-router-dom";
+import  Link  from "next/link";
 import {
   Heart,
   Shield,
@@ -8,15 +8,15 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Service, InsuranceServiceCardProps } from "@/types/insurance";
+} from "../../components/ui/card";
+import { Service, InsuranceServiceCardProps } from "../../../src/types/insurance";
 import styles from "../../styles/insurance/ServiceSection.module.css";
 import "../../styles/avix.css";
 
@@ -77,7 +77,7 @@ const InsuranceServiceCard: FC<InsuranceServiceCardProps> = memo(
             <div className={styles.servicePricing}>
               {service.serviceType}: <span>{service.pricing}</span>
             </div>
-            <Link to="/contact">
+            <Link href="/contact">
               <Button
                 variant="outline"
                 size="sm"

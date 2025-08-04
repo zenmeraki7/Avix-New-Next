@@ -13,7 +13,7 @@ import {
   Category,
   MSMEServiceCardProps,
   CategorySectionProps,
-} from "@/types/msme";
+} from "../../../src/types/msme";
 import styles from "../../styles/msme/ServiceGrid.module.css";
 import  Link  from "next/link";
 
