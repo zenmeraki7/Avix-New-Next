@@ -3,7 +3,7 @@ import styles from "../../../src/styles/home/PartnersSection.module.css";
 import Image from "next/image";
 
 const InsurancePartnersSection = () => {
-   const insurancePartners = [
+  const insurancePartners = [
     { src: "/assets/aditya.webp", alt: "Aditya Birla Insurance" },
     { src: "/assets/aig.webp", alt: "AIG" },
     { src: "/assets/icici.webp", alt: "ICICI Lombard" },
@@ -22,12 +22,10 @@ const InsurancePartnersSection = () => {
     <section className={styles.partnersSection}>
       <div className={styles.partnersContainer}>
         <div className={styles.partnersHeader}>
-          <h2 className={styles.partnersTitle}>
-            Our Insurance Partners
-          </h2>
+          <h2 className={styles.partnersTitle}>Our Insurance Partners</h2>
           <p className={styles.partnersSubtitle}>
-            We collaborate with leading insurance companies to provide
-            you the best coverage options
+            We collaborate with leading insurance companies to provide you the
+            best coverage options
           </p>
         </div>
 
@@ -39,14 +37,13 @@ const InsurancePartnersSection = () => {
         >
           <div className={styles.partnersGrid}>
             {duplicatedPartners.map((partner, index) => (
-              <div
-                key={index}
-                className={styles.partnerCard}
-              >
+              <div key={index} className={styles.partnerCard}>
                 <Image
                   src={partner.src}
                   alt={partner.alt}
                   className={styles.partnerLogo}
+                  width={96} 
+                  height={48}
                 />
               </div>
             ))}

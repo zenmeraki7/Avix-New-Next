@@ -33,12 +33,10 @@ const TrustedPartnersSection = () => {
     <section className={styles.partnersSection}>
       <div className={styles.partnersContainer}>
         <div className={styles.partnersHeader}>
-          <h2 className={styles.partnersTitle}>
-            Our Trusted Partners
-          </h2>
+          <h2 className={styles.partnersTitle}>Our Trusted Partners</h2>
           <p className={styles.partnersSubtitle}>
-            We collaborate with leading financial institutions to provide
-            you the best services
+            We collaborate with leading financial institutions to provide you
+            the best services
           </p>
         </div>
 
@@ -50,14 +48,13 @@ const TrustedPartnersSection = () => {
         >
           <div className={styles.partnersGrid}>
             {duplicatedPartners.map((partner, index) => (
-              <div
-                key={index}
-                className={styles.partnerCard}
-              >
+              <div key={index} className={styles.partnerCard}>
                 <Image
                   src={partner.src}
                   alt={partner.alt}
                   className={styles.partnerLogo}
+                  width={96}
+                  height={48}
                 />
               </div>
             ))}

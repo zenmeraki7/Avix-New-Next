@@ -20,24 +20,21 @@ const WhyChooseUsSection = () => {
       <div className={styles.whyChooseUsContainer}>
         <div className={styles.whyChooseUsGrid}>
           <div className={styles.whyChooseUsContent}>
-            <h3 className={styles.whyChooseUsTitle}>
-              Why Choose AVIX ?
-            </h3>
+            <h3 className={styles.whyChooseUsTitle}>Why Choose AVIX ?</h3>
             <div className={styles.whyChooseUsFeatures}>
               {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className={styles.whyChooseUsFeature}
-                >
+                <div key={index} className={styles.whyChooseUsFeature}>
                   <CheckCircle className="w-6 h-6 text-yellow-300 flex-shrink-0" />
-                  <span>
-                    {feature}
-                  </span>
+                  <span>{feature}</span>
                 </div>
               ))}
             </div>
             <div className={styles.whyChooseUsButton}>
-              <Button className="avix-button-secondary hover:avix-button-secondary" size="lg" asChild>
+              <Button
+                className="avix-button-secondary hover:avix-button-secondary"
+                size="lg"
+                asChild
+              >
                 <Link href="/about">Learn More About Us</Link>
               </Button>
             </div>
@@ -47,6 +44,8 @@ const WhyChooseUsSection = () => {
               src={"/assets/family.png"}
               alt="Financial Services Overview"
               className="avix-shadow-hero"
+              width={576}
+              height={384}
             />
           </div>
         </div>
