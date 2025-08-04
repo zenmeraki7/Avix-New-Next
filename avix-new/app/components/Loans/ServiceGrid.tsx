@@ -11,10 +11,10 @@ import {
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
-import { Service, ServiceCardProps } from "../../../src/types/msme";
+import { Service, MSMEServiceCardProps } from "../../../src/types/msme";
 import styles from "../../styles/loans/ServiceGrid.module.css";
 
-const ServiceCard: FC<ServiceCardProps> = memo(({ service, index }) => (
+const ServiceCard: FC<MSMEServiceCardProps> = memo(({ service, index }) => (
   <div
     className={styles.serviceCard}
     style={{

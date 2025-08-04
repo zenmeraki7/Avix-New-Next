@@ -1,5 +1,6 @@
+"use client";
+
 import { Suspense, lazy } from "react";
-import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import HeroSection from "./components/Home/HeroSection"; 
 
@@ -14,7 +15,6 @@ const CTASection = lazy(() => import("./components/Home/CTASection"));
 export default function Home() {
   return (
     <>
-      <Header />
       <HeroSection />
       <Suspense fallback={<div>Loading…</div>}>
         <StatsSection />

@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
-                <Image src={"/assets/AvixLogo.png"} alt="AVIX Logo" className="w-10 h-10" />
+                <Image src={"/assets/AvixLogo.png"} alt="AVIX Logo" fill className="w-10 h-10" />
               </div>
               <span className="text-2xl font-bold">AVIX </span>
             </div>

@@ -60,7 +60,7 @@ const HeroSection = () => {
             asChild
           >
             <Link href="/contact" className="flex items-center">
-              Get Free Consultation
+              Get  Consultation
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </Button>

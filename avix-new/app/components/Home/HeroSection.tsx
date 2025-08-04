@@ -1,9 +1,9 @@
-import  Link  from "next/link";
-import { Button } from "../../components/ui/button";
+
+import Link  from "next/link";
+import { Button } from "../ui/button";
 import { ArrowRight, Calculator } from "lucide-react";
-import bg from "../../public/assets/bg.png";
-import styles from "../../styles/home/HeroSection.module.css";
-import "../../styles/avix.css";
+import styles from "../../../src/styles/home/HeroSection.module.css";
+import "../../../src/styles/avix.css";
 
 const HeroSection = () => {
   return (
@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div
         className={styles.heroBackground}
         style={{
-          backgroundImage: `url(${bg})`,
+          backgroundImage: `url("/assets/bg.png)`,
         }}
       >
         <div className={`${styles.heroOverlay} avix-gradient-primary`} />

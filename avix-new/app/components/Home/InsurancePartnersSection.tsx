@@ -1,26 +1,18 @@
 import Marquee from "react-fast-marquee";
-import aditya from "../../public/assets/aditya.webp";
-import aig from "../../public/assets/aig.webp";
-import icici from "../../public/assets/icici.webp";
-import lombard from "../../public/assets/lombard.webp";
-import niva from "../../public/assets/niva.webp";
-import care from "../../public/assets/care.webp";
-import cigna from "../../public/assets/cigna.webp";
-import ergo from "../../public/assets/ergo.webp";
-import star from "../../public/assets/star.webp";
-import styles from "../../styles/home/PartnersSection.module.css";
+import styles from "../../../src/styles/home/PartnersSection.module.css";
+import Image from "next/image";
 
 const InsurancePartnersSection = () => {
   const insurancePartners = [
-    { src: aditya, alt: "Aditya Birla Insurance" },
-    { src: aig, alt: "AIG" },
-    { src: icici, alt: "ICICI Lombard" },
-    { src: lombard, alt: "Lombard" },
-    { src: niva, alt: "Niva Bupa" },
-    { src: care, alt: "Care Health Insurance" },
-    { src: cigna, alt: "Cigna TTK" },
-    { src: ergo, alt: "Ergo Insurance" },
-    { src: star, alt: "Star Health" },
+    { src: "/assets/aditya.webp", alt: "Aditya Birla Insurance" },
+    { src: "/assets/aig.webp", alt: "AIG" },
+    { src: "/assets/icici.webp", alt: "ICICI Lombard" },
+    { src: "/assets/lombard.webp", alt: "Lombard" },
+    { src: "/assets/niva.webp", alt: "Niva Bupa" },
+    { src: "/assets/care.webp", alt: "Care Health Insurance" },
+    { src: "/assets/cigna.webp", alt: "Cigna TTK" },
+    { src: "/assets/ergo.webp", alt: "Ergo Insurance" },
+    { src: "/assets/star.webp", alt: "Star Health" },
   ];
 
   // Duplicate partners for seamless scrolling
@@ -30,12 +22,10 @@ const InsurancePartnersSection = () => {
     <section className={styles.partnersSection}>
       <div className={styles.partnersContainer}>
         <div className={styles.partnersHeader}>
-          <h2 className={styles.partnersTitle}>
-            Our Insurance Partners
-          </h2>
+          <h2 className={styles.partnersTitle}>Our Insurance Partners</h2>
           <p className={styles.partnersSubtitle}>
-            We collaborate with leading insurance companies to provide
-            you the best coverage options
+            We collaborate with leading insurance companies to provide you the
+            best coverage options
           </p>
         </div>
 
@@ -47,14 +37,13 @@ const InsurancePartnersSection = () => {
         >
           <div className={styles.partnersGrid}>
             {duplicatedPartners.map((partner, index) => (
-              <div
-                key={index}
-                className={styles.partnerCard}
-              >
-                <img
+              <div key={index} className={styles.partnerCard}>
+                <Image
                   src={partner.src}
                   alt={partner.alt}
                   className={styles.partnerLogo}
+                  width={96} 
+                  height={48}
                 />
               </div>
             ))}

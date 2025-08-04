@@ -1,12 +1,13 @@
-import  Link  from "next/link";
-import { Button } from "../../components/ui/button";
+import Link from "next/link";
+import { Button } from "../ui/button";
+
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../../components/ui/card";
+} from "../ui/card";
 import {
   CreditCard,
   TrendingUp,
@@ -19,94 +20,114 @@ import {
   Clock,
 } from "lucide-react";
 import { memo, useMemo } from "react";
-import styles from "../../styles/home/ServicesSection.module.css";
-import "../../styles/avix.css";
+import styles from "../../../src/styles/home/ServicesSection.module.css";
+import "../../../src/styles/avix.css";
+
+// Strongly typed service shape
+interface Service {
+  title: string;
+  description: string;
+  features: string[];
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  link: string;
+  badge: string;
+  startingRate: string;
+  popular?: boolean;
+  fastTrack?: boolean;
+}
+
+// Props for the card
+interface ModernServiceCardProps {
+  service: Service;
+  index: number;
+}
 
 // Memoized Modern Service Card Component with AVIX Theme
-const ModernServiceCard = memo(
-  ({ service, index }: { service: any; index: number }) => {
-    const isPopular = service.popular;
+const ModernServiceCard = memo(function ModernServiceCard({
+  service,
+  index,
+}: ModernServiceCardProps) {
+  const isPopular = service.popular;
 
-    return (
-      <Card
-        className={`group ${
-          styles.serviceCard
-        } avix-gradient-card avix-shadow-card hover:avix-shadow-hero ${
-          isPopular ? "ring-2 ring-purple-200/50" : ""
-        }`}
-        style={{ animationDelay: `${index * 150}ms` }}
-      >
-        {/* Popular Badge */}
-        {isPopular && (
-          <div className={`${styles.popularBadge} avix-popular-badge`}>
-            <Zap className="w-3 h-3 mr-1" />
-            Most Popular
+  return (
+    <Card
+      className={`group ${styles.serviceCard} avix-gradient-card avix-shadow-card hover:avix-shadow-hero ${
+        isPopular ? "ring-2 ring-purple-200/50" : ""
+      }`}
+      style={{ animationDelay: `${index * 150}ms` }}
+    >
+      {/* Popular Badge */}
+      {isPopular && (
+        <div className={`${styles.popularBadge} avix-popular-badge`}>
+          <Zap className="w-3 h-3 mr-1" />
+          Most Popular
+        </div>
+      )}
+
+      <CardHeader className={styles.serviceHeader}>
+        <div className={styles.serviceHeaderTop}>
+          <div className={`${styles.serviceIcon} avix-icon-bg`}>
+            <service.icon className="w-8 h-8 text-white" />
+            {service.fastTrack && (
+              <div className={styles.fastTrackBadge}>
+                <Clock className="w-3 h-3 text-white" />
+              </div>
+            )}
           </div>
-        )}
+          <div className={`${styles.serviceBadge} avix-accent`}>
+            {service.badge}
+          </div>
+        </div>
 
-        <CardHeader className={styles.serviceHeader}>
-          <div className={styles.serviceHeaderTop}>
-            <div className={`${styles.serviceIcon} avix-icon-bg`}>
-              <service.icon className="w-8 h-8 text-white" />
-              {service.fastTrack && (
-                <div className={styles.fastTrackBadge}>
-                  <Clock className="w-3 h-3 text-white" />
-                </div>
-              )}
+        <CardTitle className={styles.serviceTitle}>
+          {service.title}
+        </CardTitle>
+        <CardDescription className={styles.serviceDescription}>
+          {service.description}
+        </CardDescription>
+      </CardHeader>
+
+      <CardContent>
+        <div className={styles.serviceFeatures}>
+          {service.features.slice(0, 4).map((feature, idx) => (
+            <div key={idx} className={styles.serviceFeature}>
+              <CheckCircle className="w-4 h-4 avix-accent mr-3 flex-shrink-0 mt-0.5" />
+              <span>{feature}</span>
             </div>
-            <div className={`${styles.serviceBadge} avix-accent`}>
-              {service.badge}
-            </div>
+          ))}
+        </div>
+
+        <div className={styles.serviceFooter}>
+          <div className={styles.serviceRate}>
+            Starting from: <span>{service.startingRate}</span>
           </div>
+          <Button
+            variant="outline"
+            size="sm"
+            asChild
+            className="group bg-[#8A1C9D] text-white border-[#8A1C9D] hover:bg-white hover:text-[#8A1C9D] transition-colors duration-200"
+          >
+            <Link href={service.link}>
+              Explore
+              <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" />
+            </Link>
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  );
+});
 
-          <CardTitle className={styles.serviceTitle}>{service.title}</CardTitle>
-          <CardDescription className={styles.serviceDescription}>
-            {service.description}
-          </CardDescription>
-        </CardHeader>
-
-        <CardContent>
-          <div className={styles.serviceFeatures}>
-            {service.features
-              .slice(0, 4)
-              .map((feature: string, idx: number) => (
-                <div key={idx} className={styles.serviceFeature}>
-                  <CheckCircle className="w-4 h-4 avix-accent mr-3 flex-shrink-0 mt-0.5" />
-                  <span>{feature}</span>
-                </div>
-              ))}
-          </div>
-
-          <div className={styles.serviceFooter}>
-            <div className={styles.serviceRate}>
-              Starting from: <span>{service.startingRate}</span>
-            </div>
-            <Button
-              variant="outline"
-              size="sm"
-              asChild
-                          className="group bg-[#8A1C9D] text-white border-[#8A1C9D] hover:bg-white hover:text-[#8A1C9D] transition-colors duration-200"
-
-            >
-              <Link to={service.link}>
-                Explore
-                <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" />
-              </Link>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    );
-  }
-);
+// Explicitly set displayName for clarity (optional since named function usually provides it)
+ModernServiceCard.displayName = "ModernServiceCard";
 
 const ServicesSection = () => {
-  const services = useMemo(
+  const services: Service[] = useMemo(
     () => [
       {
         title: "Loans",
         description:
-          "Apply online for fast, hassle‑free personal, business, car, and loan‑takeover financing. Enjoy competitive interest rates, flexible repayment tenures, and instant approval with minimal documentation to meet all your funding needs.",
+          "Apply online for fast, hassle-free personal, business, car, and loan-takeover financing. Enjoy competitive interest rates, flexible repayment tenures, and instant approval with minimal documentation to meet all your funding needs.",
         features: [
           "Fast personal loans with minimal paperwork",
           "Unsecured Business loans for working capital and growth",
@@ -130,7 +151,7 @@ const ServicesSection = () => {
           "Access 2,000+ direct mutual fund schemes",
           "Tailored SIP plans for disciplined wealth creation",
           "Professional portfolio management & periodic rebalancing",
-          "Tax‑saving ELSS funds & retirement planning solutions",
+          "Tax-saving ELSS funds & retirement planning solutions",
           "Risk assessment and goal planning",
           "Regular performance tracking",
         ],
@@ -146,13 +167,13 @@ const ServicesSection = () => {
         features: [
           "Comprehensive health insurance with cashless hospitalization network",
           "Life insurance policies offering tax benefits under Section 80C",
-          "Motor insurance for cars and bikes with zero‑depreciation cover",
-          "Travel insurance for domestic & international trips with COVID‑19 protection",
+          "Motor insurance for cars and bikes with zero-depreciation cover",
+          "Travel insurance for domestic & international trips with COVID-19 protection",
           "Home and property insurance coverage",
           "24/7 claims assistance support",
         ],
         icon: Shield,
-        link: "/insurence",
+        link: "/insurence", // (optional) fix typo if intended: "/insurance"
         badge: "Up to ₹1 Cr",
         startingRate: "₹999/year",
         popular: true,
@@ -209,7 +230,7 @@ const ServicesSection = () => {
             asChild
             className="group bg-[#8A1C9D] text-white border-[#8A1C9D] hover:bg-white hover:text-[#8A1C9D] transition-colors duration-200"
           >
-            <Link to="/services">
+            <Link href="/services">
               View All Services
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
