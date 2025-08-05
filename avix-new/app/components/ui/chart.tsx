@@ -106,7 +106,7 @@ interface TooltipPayloadItem {
   name?: string | number
   value?: string | number | (string | number)[]
   color?: string
-  payload?: Record<string, any>
+  payload?: Record<string, unknown>
   fill?: string
 }
 
@@ -283,7 +283,7 @@ interface LegendPayloadItem {
   value?: string
   dataKey?: string | number
   color?: string
-  payload?: Record<string, any>
+  payload?: Record<string, unknown>
 }
 
 const ChartLegendContent = React.forwardRef<
