@@ -67,7 +67,7 @@ ChartContainer.displayName = "Chart"
 
 const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
   const colorConfig = Object.entries(config).filter(
-    ([_, config]) => config.theme || config.color
+    ([, config]) => config.theme || config.color
   )
 
   if (!colorConfig.length) {
@@ -122,8 +122,8 @@ const ChartTooltipContent = React.forwardRef<
       indicator?: "line" | "dot" | "dashed"
       nameKey?: string
       labelKey?: string
-      labelFormatter?: (value: any, payload: TooltipPayloadItem[]) => React.ReactNode
-      formatter?: (value: any, name: any, props: any, index: number, payload: any) => React.ReactNode
+      labelFormatter?: (value: string | number, payload: TooltipPayloadItem[]) => React.ReactNode
+      formatter?: (value: string | number | (string | number)[], name: string | number, props: TooltipPayloadItem, index: number, payload: TooltipPayloadItem["payload"]) => React.ReactNode
       labelClassName?: string
       color?: string
     }
@@ -348,7 +348,7 @@ ChartLegendContent.displayName = "ChartLegend"
 // Helper to extract item config from a payload.
 function getPayloadConfigFromPayload(
   config: ChartConfig,
-  payload: unknown,
+  payload: TooltipPayloadItem | LegendPayloadItem,
   key: string
 ) {
   if (typeof payload !== "object" || payload === null) {
