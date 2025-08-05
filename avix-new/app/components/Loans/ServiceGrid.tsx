@@ -12,7 +12,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Service, MSMEServiceCardProps } from "../../../src/types/msme";
-import styles from "../../styles/loans/ServiceGrid.module.css";
+import styles from "../../../src/styles/loans/ServiceGrid.module.css";
 
 const ServiceCard: FC<MSMEServiceCardProps> = memo(({ service, index }) => (
   <div
