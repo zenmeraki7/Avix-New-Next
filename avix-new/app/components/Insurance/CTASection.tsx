@@ -1,8 +1,8 @@
 import  Link  from "next/link";
 import { Phone, Calculator } from "lucide-react";
 import { Button } from "../../components/ui/button";
-import styles from "../../styles/insurance/CTASection.module.css";
-import "../../styles/avix.css";
+import styles from "../../../src/styles/insurance/CTASection.module.css";
+import "../../../src/styles/avix.css";
 
 
 

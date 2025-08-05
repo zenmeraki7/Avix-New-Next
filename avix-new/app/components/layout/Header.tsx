@@ -21,7 +21,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
   const pathname = usePathname();
-
+console.log('Current pathname:', pathname);
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },

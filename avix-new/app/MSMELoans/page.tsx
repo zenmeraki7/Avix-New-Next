@@ -1,5 +1,4 @@
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
+
 import HeroSection from "../components/Msme/HeroSection";
 import ServiceGrid from "../components/Msme/ServiceGrid";
 import CTASection from "../components/Msme/CTASection";
@@ -7,11 +6,9 @@ import CTASection from "../components/Msme/CTASection";
 const MSMELoans = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Header />
       <HeroSection />
       <ServiceGrid />
       <CTASection />
-      <Footer />
     </div>
   );
 };
