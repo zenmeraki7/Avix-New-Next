@@ -14,7 +14,7 @@ import {
 import { Service, MSMEServiceCardProps } from "../../../src/types/msme";
 import styles from "../../../src/styles/loans/ServiceGrid.module.css";
 
-const ServiceCard: FC<MSMEServiceCardProps> = memo(({ service, index }) => (
+const RawServiceCard: FC<MSMEServiceCardProps> = ({ service, index }) => (
   <div
     className={styles.serviceCard}
     style={{
@@ -25,18 +25,12 @@ const ServiceCard: FC<MSMEServiceCardProps> = memo(({ service, index }) => (
       <div className={styles.serviceIcon}>
         <service.icon className="w-8 h-8 text-blue-600" />
       </div>
-      <div className={styles.serviceRate}>
-        {service.rate}
-      </div>
+      <div className={styles.serviceRate}>{service.rate}</div>
     </div>
 
-    <h3 className={styles.serviceTitle}>
-      {service.title}
-    </h3>
+    <h3 className={styles.serviceTitle}>{service.title}</h3>
 
-    <p className={styles.serviceDescription}>
-      {service.description}
-    </p>
+    <p className={styles.serviceDescription}>{service.description}</p>
 
     <div className={styles.serviceFeatures}>
       {service.features.map((feature, idx) => (
@@ -49,8 +43,7 @@ const ServiceCard: FC<MSMEServiceCardProps> = memo(({ service, index }) => (
 
     <div className={styles.serviceFooter}>
       <div className={styles.serviceAmount}>
-        Amount:{" "}
-        <span>{service.amount}</span>
+        Amount: <span>{service.amount}</span>
       </div>
       <Link href="/Contact" className={styles.serviceButton}>
         Apply Now
@@ -58,7 +51,11 @@ const ServiceCard: FC<MSMEServiceCardProps> = memo(({ service, index }) => (
       </Link>
     </div>
   </div>
-));
+);
+
+RawServiceCard.displayName = "ServiceCard";
+
+const ServiceCard = memo(RawServiceCard);
 
 const ServiceGrid: FC = () => {
   const services: Service[] = useMemo(
