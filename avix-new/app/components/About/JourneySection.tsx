@@ -1,8 +1,8 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "../ui/card";
 import { Building, Shield, TrendingUp, Award, Sparkles } from "lucide-react";
 import { useMemo } from "react";
-import styles from "@/styles/about/JourneySection.module.css";
-import "@/styles/avix.css";
+import styles from "../../../src/styles/about/JourneySection.module.css";
+import "../../../src/styles/avix.css";
 
 const JourneySection = () => {
   const milestones = useMemo(

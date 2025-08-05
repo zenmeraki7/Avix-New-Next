@@ -1,5 +1,4 @@
-import Header from '../components/layout/Header';
-import Footer from '../components/layout/Footer';
+
 import EMICalculator from '../components/Services/emi-calculator/EMICalculator';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
@@ -39,7 +38,6 @@ const Calculator = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
       
       {/* Hero Section */}
       <section className="py-16 bg-gradient-primary text-primary-foreground">
@@ -195,7 +193,6 @@ const Calculator = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };
