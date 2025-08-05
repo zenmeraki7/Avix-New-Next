@@ -33,33 +33,36 @@ const Header = () => {
   return (
     <>
       {/* Announcement bar */}
-      {showAnnouncement && (
-        <div className="bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-700 text-white py-3 px-4 relative overflow-hidden">
-          <div className="whitespace-nowrap overflow-hidden animate-scroll">
-            <span className="inline-flex space-x-8 text-sm md:text-base font-medium">
-              <span className="flex items-center space-x-2">
-                <Zap className="w-5 h-5 text-yellow-300 animate-pulse" />
-                <span>🎉 Personal Loans from</span>
-                <span className="font-bold text-yellow-300">9.99%*</span>
-                <span>| Approval in 24 Hours</span>
-              </span>
-              <span className="flex items-center space-x-2">
-                <CreditCard className="w-5 h-5" />
-                <span>💰 Business Loans</span>
-                <span>| Fully Digital Process</span>
-              </span>
-            </span>
-          </div>
-          <Button
-            variant="ghost"
-            size="sm"
-            className="absolute top-1/2 -translate-y-1/2 right-2 text-white/70 hover:text-white hover:bg-white/10 p-1"
-            onClick={() => setShowAnnouncement(false)}
-          >
-            <X className="w-4 h-4" />
-          </Button>
-        </div>
-      )}
+     {showAnnouncement && (
+  <div className="bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-700 text-white py-3 px-4 relative marquee-wrapper">
+    <div className="marquee-content">
+      <span className="inline-flex space-x-8 text-sm md:text-base font-medium items-center">
+        <span className="flex items-center space-x-2">
+          <Zap className="w-5 h-5 text-yellow-300 animate-pulse" />
+          <span>🎉 Personal Loans from</span>
+          <span className="font-bold text-yellow-300">9.99%*</span>
+          <span>| Approval in 24 Hours</span>
+        </span>
+        <span className="flex items-center space-x-2 ml-10">
+          <CreditCard className="w-5 h-5" />
+          <span>💰 Business Loans</span>
+          <span>| Fully Digital Process</span>
+        </span>
+      </span>
+    </div>
+    <Button
+      variant="ghost"
+      size="sm"
+      className="absolute top-1/2 -translate-y-1/2 right-2 text-white/70 hover:text-white hover:bg-white/10 p-1 z-10"
+      onClick={() => setShowAnnouncement(false)}
+    >
+      <X className="w-4 h-4" />
+    </Button>
+  </div>
+)}
+
+
+    
 
       {/* Main Header */}
       <header className="sticky top-0 z-10 bg-white/95 backdrop-blur border-b">
@@ -72,6 +75,7 @@ const Header = () => {
                   src="/assets/AvixLogo.png"
                   alt="AVIX Logo"
                   fill
+                  sizes="48px"
                   className="object-contain"
                 />
               </div>

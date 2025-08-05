@@ -45,7 +45,7 @@ const TrustedPartnersSection = () => {
 
         <Marquee
           gradient={false}
-          speed={5}
+          speed={50}
           pauseOnHover={true}
           className={styles.partnersMarquee}
         >

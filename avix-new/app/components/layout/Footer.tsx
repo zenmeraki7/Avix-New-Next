@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 import {
   Mail,
   Phone,
@@ -33,9 +33,16 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
-                <Image src={"/assets/AvixLogo.png"} alt="AVIX Logo" fill className="w-10 h-10" />
+              <div className="relative w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
+                <Image
+                  src="/assets/AvixLogo.png"
+                  alt="AVIX Logo"
+                  fill
+                  sizes="40px"
+                  className="object-contain"
+                />
               </div>
+
               <span className="text-2xl font-bold">AVIX </span>
             </div>
             <p className="text-primary-foreground/80 mb-6 max-w-md">

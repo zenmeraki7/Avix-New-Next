@@ -1,7 +1,6 @@
 "use client";
 
 import { Suspense, lazy } from "react";
-import Footer from "./components/layout/Footer";
 import HeroSection from "./components/Home/HeroSection"; 
 
 const StatsSection = lazy(() => import("./components/Home/StatsSection"));
@@ -25,7 +24,7 @@ export default function Home() {
         <TestimonialsSection />
         <CTASection />
       </Suspense>
-      <Footer />
+  
     </>
   );
 }
