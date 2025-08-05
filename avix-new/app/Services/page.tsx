@@ -1,11 +1,8 @@
-// import { lazy, Suspense } from "react";
-
 import HeroSection from "../components/Services/HeroSection";
 import ServiceCategories from "../components/Services/ServiceCategories";
 import WhyChooseAVIXSection from "../components/Services/WhyChooseAVIXSection";
 import EMICalculatorSection from "../components/Services/EMICalculatorSection";
 import FinalCTASection from "../components/Services/FinalCTASection";
-
 
 const Services = () => {
   return (
