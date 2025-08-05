@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
+
 import {
   Card,
   CardContent,
@@ -250,7 +249,6 @@ const Contact = () => {
     <>
       <style>{avixStyles}</style>
       <div className="min-h-screen bg-gray-50">
-        <Header />
 
         {/* Hero Section */}
         <section className="py-24 avix-hero-bg text-white relative">
@@ -615,7 +613,6 @@ const Contact = () => {
           ></div>
         </section>
 
-        <Footer />
       </div>
     </>
   );
