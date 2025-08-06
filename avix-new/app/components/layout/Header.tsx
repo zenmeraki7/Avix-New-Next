@@ -21,7 +21,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
   const pathname = usePathname();
-
+console.log('Current pathname:', pathname);
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -81,7 +81,7 @@ const Header = () => {
               </div>
 
               <div className="flex flex-col">
-                <span className="text-2xl font-bold">AVIX</span>
+                <span className="text-2xl font-bold text-foreground leading-tight">AVIX</span>
                 <span className="text-xs text-gray-500 hidden sm:block">
                   Financial Services
                 </span>

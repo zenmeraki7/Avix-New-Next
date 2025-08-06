@@ -1,12 +1,12 @@
-
+"use client"
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../../components/ui/card';
 import { Button } from '../../../components/ui/button';
 import { Label } from '../../../components/ui/label';
 import { Slider } from '../../../components/ui/slider';
 import { Calculator, Download, Share2 } from 'lucide-react';
-import styles from '../../../styles/services/emi-calculator/EMICalculator.module.css';
-import '../../../styles/avix.css';
+import styles from '../../../../src/styles/services/emi-calculator/EMICalculator.module.css';
+import '../../../../src/styles/services/emi-calculator/EMICalculator.module.css';
 import Link from 'next/link';
 
 const EMICalculator = () => {

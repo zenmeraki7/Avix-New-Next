@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "../ui/card";
 import { Heart, Shield, TrendingUp, Award } from "lucide-react";
 import { useMemo } from "react";
 import styles from "@/styles/about/ValuesSection.module.css";

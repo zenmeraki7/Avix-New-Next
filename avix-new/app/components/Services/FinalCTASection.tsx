@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Button } from "../../components/ui/button";
 import { Star, ArrowRight } from "lucide-react";
-import styles from "../../styles/services/FinalCTASection.module.css";
-import "../../styles/avix.css";
+import styles from "../../../src/styles/services/FinalCTASection.module.css";
+import "../../../src/styles/avix.css";
 
 const FinalCTASection = () => {
   return (

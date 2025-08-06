@@ -1,16 +1,16 @@
 import { useMemo } from "react";
-import  Link  from "next/link";
+import Link from "next/link";
 import { CheckCircle, Phone, Calculator } from "lucide-react";
-import { Button } from "../../components/ui/button";
+import { Button } from "../ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../../components/ui/card";
-import styles from "../../styles/insurance/WhyChooseSection.module.css";
-import "../../styles/avix.css";
+} from "../ui/card";
+import styles from "../../../src/styles/insurance/WhyChooseSection.module.css";
+import "../../../src/styles/avix.css";
 
 const WhyChooseSection = () => {
   const benefits = useMemo(
@@ -36,14 +36,18 @@ const WhyChooseSection = () => {
             <div className={styles.benefitsList}>
               {benefits.map((benefit, index) => (
                 <div key={index} className={styles.benefitItem}>
-                  <CheckCircle className={`${styles.benefitIcon} avix-accent`} />
+                  <CheckCircle
+                    className={`${styles.benefitIcon} avix-accent`}
+                  />
                   <span className={styles.benefitText}>{benefit}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <Card className={`${styles.contactCard} avix-gradient-primary avix-shadow-hero`}>
+          <Card
+            className={`${styles.contactCard} avix-gradient-primary avix-shadow-hero`}
+          >
             <CardHeader className={styles.contactHeader}>
               <CardTitle className={styles.contactTitle}>
                 Ready to Get Protected?
@@ -65,12 +69,13 @@ const WhyChooseSection = () => {
               </div>
               <div className={styles.contactButtons}>
                 <Button
-                  className="w-full avix-button-secondary hover:avix-button-secondary"
+                  className="w-full avix-button-secondary hover:!bg-[#1A004D] hover:!text-white"
                   size="lg"
                   asChild
                 >
                   <Link href="/contact">Get Consultation</Link>
                 </Button>
+
                 <Button
                   className="w-full bg-white/20 hover:bg-white/30 text-white border-white/30"
                   size="lg"

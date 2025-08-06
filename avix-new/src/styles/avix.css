@@ -1,19 +1,24 @@
 /* AVIX Brand Colors and Utilities */
 .avix-gradient-primary {
-  background: linear-gradient(135deg, #1C004D 0%, #3A0087 50%, #8A1C9D 100%);
+  background: linear-gradient(135deg, #1c004d 0%, #3a0087 50%, #8a1c9d 100%);
 }
 
 .avix-gradient-card {
-  background: linear-gradient(145deg, rgba(28, 0, 77, 0.02) 0%, rgba(58, 0, 135, 0.04) 50%, rgba(138, 28, 157, 0.02) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(28, 0, 77, 0.02) 0%,
+    rgba(58, 0, 135, 0.04) 50%,
+    rgba(138, 28, 157, 0.02) 100%
+  );
   border: 1px solid rgba(138, 28, 157, 0.1);
 }
 
 .avix-accent {
-  color: #8A1C9D;
+  color: #8a1c9d;
 }
 
 .avix-icon-bg {
-  background: linear-gradient(135deg, #1C004D 0%, #3A0087 50%, #8A1C9D 100%);
+  background: linear-gradient(135deg, #1c004d 0%, #3a0087 50%, #8a1c9d 100%);
 }
 
 .avix-shadow-card {
@@ -26,7 +31,7 @@
 
 .avix-button-secondary {
   background: rgba(255, 255, 255, 0.9);
-  color: #1C004D;
+  color: #1c004d;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -35,30 +40,38 @@
   color: white !important;
 }
 
-
 .avix-premium-badge {
-  background: linear-gradient(135deg, #8A1C9D 0%, #3A0087 100%);
+  background: linear-gradient(135deg, #8a1c9d 0%, #3a0087 100%);
   color: white;
 }
 
 .avix-popular-badge {
-  background: linear-gradient(135deg, #8A1C9D 0%, #FF6B35 100%);
+  background: linear-gradient(135deg, #8a1c9d 0%, #ff6b35 100%);
   color: white;
 }
 
 /* Enhanced AVIX Styles for All Pages */
 .avix-gradient-secondary {
-  background: linear-gradient(145deg, rgba(28, 0, 77, 0.05) 0%, rgba(58, 0, 135, 0.08) 50%, rgba(138, 28, 157, 0.05) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(28, 0, 77, 0.05) 0%,
+    rgba(58, 0, 135, 0.08) 50%,
+    rgba(138, 28, 157, 0.05) 100%
+  );
 }
 
 .avix-gradient-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(248, 250, 252, 0.9) 100%
+  );
   border: 1px solid rgba(138, 28, 157, 0.1);
   backdrop-filter: blur(10px);
 }
 
 .avix-text-gradient {
-  background: linear-gradient(135deg, #1C004D 0%, #3A0087 50%, #8A1C9D 100%);
+  background: linear-gradient(135deg, #1c004d 0%, #3a0087 50%, #8a1c9d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -85,20 +98,34 @@
 }
 
 .avix-hero-bg {
-  background: linear-gradient(135deg, #1C004D 0%, #3A0087 30%, #8A1C9D 70%, #B83FBD 100%);
+  background: linear-gradient(
+    135deg,
+    #1c004d 0%,
+    #3a0087 30%,
+    #8a1c9d 70%,
+    #b83fbd 100%
+  );
   position: relative;
   overflow: hidden;
 }
 
 .avix-hero-bg::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 50%
+    );
 }
 
 .avix-text-shadow {
@@ -107,23 +134,23 @@
 
 .avix-button-secondary {
   background: rgba(255, 255, 255, 0.9);
-  color: #1C004D;
+  color: #1c004d;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .avix-button-secondary:hover {
   background: rgba(255, 255, 255, 1);
-  color: #1C004D;
+  color: #1c004d;
 }
 
 .avix-premium-badge {
-  background: linear-gradient(135deg, #8A1C9D 0%, #3A0087 100%);
+  background: linear-gradient(135deg, #8a1c9d 0%, #3a0087 100%);
   color: white;
 }
 
 .avix-accent-bg {
   background: rgba(138, 28, 157, 0.1);
-  color: #8A1C9D;
+  color: #8a1c9d;
 }
 
 .avix-success-bg {
@@ -144,7 +171,11 @@
 }
 
 .highlight-badge {
-  background: linear-gradient(135deg, rgba(138, 28, 157, 0.1) 0%, rgba(138, 28, 157, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(138, 28, 157, 0.1) 0%,
+    rgba(138, 28, 157, 0.05) 100%
+  );
   border: 1px solid rgba(138, 28, 157, 0.2);
 }
 
@@ -180,13 +211,25 @@
 }
 
 @keyframes avix-float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes avix-pulse-soft {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.05); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
 }
 
 @keyframes avix-slide-up {
@@ -222,4 +265,84 @@
 
 .category-section {
   margin-bottom: 4rem;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("/assets/fonts/libre-baskerville-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* Ensures text is always visible */
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("/assets/fonts/libre-baskerville-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CSS Reset + Critical Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* System font stack for maximum performance - zero loading time */
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  background-color: #ffffff;
+  color: #1a202c;
+}
+
+#root {
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* Loading state to prevent CLS */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Critical above-the-fold styles */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/bg.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Fallback for older browsers */
+.hero-section.no-avif {
+  background-image: url("/assets/bg.webp");
+}
+
+.hero-section.no-webp {
+  background-image: url("/assets/bg.jpg");
 }

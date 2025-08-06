@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "../ui/card";
 import { Target, TrendingUp } from "lucide-react";
 import { useMemo } from "react";
 import styles from "@/styles/about/FoundationSection.module.css";

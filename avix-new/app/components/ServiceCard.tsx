@@ -1,7 +1,7 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
 import { ArrowRight, LucideIcon } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link  from 'next/link';
 
 interface ServiceCardProps {
   title: string;
@@ -38,7 +38,7 @@ const ServiceCard = ({ title, description, features, icon: Icon, className, link
             variant="outline"
             className="w-full group-hover:bg-primary group-hover:text-primary-foreground"
           >
-            <Link to={link}>
+            <Link href={link}>
               View More
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
             </Link>

@@ -1,9 +1,9 @@
 import { FC, memo, useMemo } from "react";
 import { Clock, Award, Calculator, TrendingUp, Shield } from "lucide-react";
-import { Card, CardContent } from "../../components/ui/card";
+import { Card, CardContent } from "../ui/card";
 import { Feature, FeatureHighlightProps } from "../../../src/types/insurance";
-import styles from "../../styles/insurance/FeatureSection.module.css";
-import "../../styles/avix.css";
+import styles from "../../../src/styles/insurance/FeatureSection.module.css";
+import "../../../src/styles/avix.css";
 
 const FeatureHighlight: FC<FeatureHighlightProps> = memo(
   ({ feature, index }) => (

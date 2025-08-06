@@ -1,25 +1,21 @@
-import  Link  from "next/link";
+import Link from "next/link";
 import { Phone, Calculator } from "lucide-react";
-import { Button } from "../../components/ui/button";
-import styles from "../../styles/insurance/CTASection.module.css";
-import "../../styles/avix.css";
-
-
+import { Button } from "../ui/button";
+import styles from "../../../src/styles/insurance/CTASection.module.css";
+import "../../../src/styles/avix.css";
 
 const CTASection = () => {
   return (
     <section className={`${styles.ctaSection} avix-gradient-primary`}>
       <div className={styles.ctaContainer}>
-        <h2 className={styles.ctaTitle}>
-          Get Protected Today
-        </h2>
+        <h2 className={styles.ctaTitle}>Get Protected Today</h2>
         <p className={styles.ctaSubtitle}>
-          Dont wait to secure your future. Get the perfect insurance
-          coverage now with expert guidance.
+          Dont wait to secure your future. Get the perfect insurance coverage
+          now with expert guidance.
         </p>
         <div className={styles.ctaButtons}>
           <Button
-            className="avix-button-secondary hover:avix-button-secondary"
+            className="avix-button-secondary hover:!bg-[#1A004D] hover:!text-white"
             size="lg"
             asChild
           >
@@ -28,8 +24,9 @@ const CTASection = () => {
               Call Expert Now
             </Link>
           </Button>
+
           <Button
-            className="bg-white/20 hover:bg-white/30 text-white border-white/30"
+            className="bg-[#1A004D] text-white border border-white/30 hover:bg-[#1A004D]"
             size="lg"
             asChild
           >

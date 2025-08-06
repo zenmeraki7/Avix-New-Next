@@ -8,17 +8,17 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
-import { Button } from "../../components/ui/button";
+import { Button } from "../ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../../components/ui/card";
+} from "../ui/card";
 import { Service, InsuranceServiceCardProps } from "../../../src/types/insurance";
-import styles from "../../styles/insurance/ServiceSection.module.css";
-import "../../styles/avix.css";
+import styles from "../../../src/styles/insurance/ServiceSection.module.css";
+import "../../../src/styles/avix.css";
 
 const InsuranceServiceCard: FC<InsuranceServiceCardProps> = memo(
   ({ service, index }) => {
