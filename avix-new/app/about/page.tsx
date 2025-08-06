@@ -5,8 +5,6 @@ import JourneySection from "../components/About/JourneySection";
 import WhyChooseUsSection from "../components/Home/WhyChooseUsSection";
 import CTASection from "../components/Home/CTASection";
 
-
-
 const About = () => {
   return (
     <div className="min-h-screen bg-gray-50">

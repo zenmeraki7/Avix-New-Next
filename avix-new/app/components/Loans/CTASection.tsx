@@ -1,7 +1,7 @@
 import  Link  from "next/link";
 import { Button } from "../../components/ui/button";
-import styles from "../../styles/loans/CTASection.module.css";
-import "../../styles/avix.css";
+import styles from "../../../src/styles/loans/CTASection.module.css";
+import "../../../src/styles/avix.css";
 
 const CTASection = () => {
   return (
