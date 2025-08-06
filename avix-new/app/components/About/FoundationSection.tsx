@@ -1,8 +1,8 @@
 import { Card, CardContent } from "../ui/card";
 import { Target, TrendingUp } from "lucide-react";
 import { useMemo } from "react";
-import styles from "@/styles/about/FoundationSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../../src/styles/about/FoundationSection.module.css";
+import "../../../src/styles/avix.css";
 
 const FoundationSection = () => {
   const foundations = useMemo(
