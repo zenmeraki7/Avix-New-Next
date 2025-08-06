@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Card, CardContent } from "../../components/ui/card";
+import { Card, CardContent } from "../ui/card";
 import { Stat } from "../../../src/types/insurance";
 import styles from "../../../src/styles/insurance/StatsSection.module.css";
 import "../../../src/styles/avix.css";

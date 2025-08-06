@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Libre_Baskerville } from 'next/font/google';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
+import './globals.css'
 
 // Load Libre Baskerville from Google Fonts
 const libreBaskerville = Libre_Baskerville({
