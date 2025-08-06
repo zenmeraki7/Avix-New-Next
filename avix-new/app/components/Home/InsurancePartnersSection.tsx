@@ -1,3 +1,5 @@
+//apps/components/Home/InsurancePartnersSection
+
 import Marquee from "react-fast-marquee";
 import styles from "../../../src/styles/home/PartnersSection.module.css";
 import Image from "next/image";

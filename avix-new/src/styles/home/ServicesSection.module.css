@@ -30,11 +30,12 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+  color: rgb(17, 24, 39); /* Added explicit dark color */
 }
 
 .servicesSubtitle {
   font-size: 1.25rem;
-  color: rgb(107, 114, 128);
+  color: rgb(55, 65, 81); /* Changed from light gray to darker gray */
   max-width: 48rem;
   margin: 0 auto;
   line-height: 1.6;
@@ -53,6 +54,9 @@
   transition-property: all;
   transition-duration: 500ms;
   transform: none;
+  background: white; /* Ensure white background */
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 0.75rem;
 }
 
 .serviceCard:hover {
@@ -117,14 +121,18 @@
   font-size: 0.875rem;
   font-weight: bold;
   background: rgb(250, 245, 255);
+  color: rgb(109, 40, 217); /* Added explicit color */
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
 }
 
 .serviceTitle {
   font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(17, 24, 39); /* Added explicit dark color */
   transition-property: color;
   transition-duration: 300ms;
+  margin-bottom: 0.75rem;
 }
 
 .serviceCard:hover .serviceTitle {
@@ -134,7 +142,8 @@
 .serviceDescription {
   font-size: 1rem;
   line-height: 1.6;
-  opacity: 0.8;
+  color: rgb(55, 65, 81); /* Changed from opacity to explicit dark gray */
+  margin-bottom: 1.5rem;
 }
 
 .serviceFeatures {
@@ -152,7 +161,8 @@
 
 .serviceFeature span {
   line-height: 1.6;
-  opacity: 0.9;
+  color: rgb(75, 85, 99); /* Changed from opacity to explicit color */
+  font-weight: 500;
 }
 
 .serviceFooter {
@@ -166,12 +176,13 @@
 
 .serviceRate {
   font-size: 0.875rem;
-  color: rgb(107, 114, 128);
+  color: rgb(75, 85, 99); /* Changed from light gray to darker */
+  font-weight: 500;
 }
 
 .serviceRate span {
-  font-weight: 600;
-  color: rgb(17, 24, 39);
+  font-weight: 700;
+  color: rgb(17, 24, 39); /* Made even darker for emphasis */
 }
 
 .viewAllButton {

@@ -1,3 +1,4 @@
+//apps/page.ts - HomePage
 "use client";
 
 import { Suspense, lazy } from "react";
