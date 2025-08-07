@@ -126,9 +126,11 @@ const avixStyles = `
     box-shadow: 0 0 0 3px rgba(138, 28, 157, 0.1);
   }
 `;
-
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeozrdyg";
 const Contact = () => {
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -137,13 +139,47 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({
-      title: "Form Submitted Successfully! 🎉",
-      description: "Our team will contact you within 24 hours.",
-    });
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+
+    try {
+      setIsLoading(true);
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Form Submitted Successfully! 🎉",
+          description: "Our team will contact you within 24 hours.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+      } else {
+        toast({
+          title: "Submission failed",
+          description: "Please try again or contact us directly.",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "An error occurred",
+        description: "Please check your connection and try again.",
+      });
+      console.error("Formspree Error:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
@@ -427,11 +463,21 @@ const Contact = () => {
 
                       <Button
                         type="submit"
+                        disabled={isLoading}
                         className="w-full avix-gradient-primary hover:avix-primary-hover text-white border-0 p-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 avix-shadow-elegant"
                         size="lg"
                       >
-                        <Send className="w-5 h-5 mr-2" />
-                        Submit & Get Consultation
+                        {isLoading ? (
+                          <>
+                            <div className="w-5 h-5 mr-2 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                            Submitting...
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-5 h-5 mr-2" />
+                            Submit & Get Consultation
+                          </>
+                        )}
                       </Button>
                     </form>
                   </CardContent>
