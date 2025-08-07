@@ -1,10 +1,10 @@
 
-import HeroSection from "../components/insurance/HeroSection";
-import StatsSection from "../components/insurance/StatsSection";
-import FeatureSection from "../components/insurance/FeatureSection";
-import ServiceSection from "../components/insurance/ServiceSection";
-import WhyChooseSection from "../components/insurance/WhyChooseSection";
-import CTASection from "../components/insurance/CTASection";
+import HeroSection from "../components/Insurance/HeroSection";
+import StatsSection from "../components/Insurance/StatsSection";
+import FeatureSection from "../components/Insurance/FeatureSection";
+import ServiceSection from "../components/Insurance/ServiceSection";
+import WhyChooseSection from "../components/Insurance/WhyChooseSection";
+import CTASection from "../components/Insurance/CTASection";
 
 const Insurance = () => {
   return (
