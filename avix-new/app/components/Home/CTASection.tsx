@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 //apps/components/Home/CTASection
 import Link from 'next/link';
-=======
-import Link from "next/link";
->>>>>>> 6394adf728b27dda16b1a1704243ecf6915f0752
+
 import { Button } from "../ui/button";
 import { Calculator } from "lucide-react";
 import styles from "../../../src/styles/home/CTASection.module.css";
