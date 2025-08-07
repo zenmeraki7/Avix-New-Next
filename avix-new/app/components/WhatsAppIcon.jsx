@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import './WhatsAppIcon.css'; // We'll create this CSS file
 

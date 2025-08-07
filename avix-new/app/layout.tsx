@@ -5,7 +5,7 @@ import { Libre_Baskerville } from 'next/font/google';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import './globals.css'
-
+import WhatsAppIcon from './components/WhatsAppIcon'
 // Load Libre Baskerville from Google Fonts
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
@@ -74,6 +74,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <WhatsAppIcon/>
       </body>
     </html>
   );
