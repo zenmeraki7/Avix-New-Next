@@ -1,8 +1,8 @@
 import { Card, CardContent } from "../ui/card";
 import { Heart, Shield, TrendingUp, Award } from "lucide-react";
 import { useMemo } from "react";
-import styles from "@/styles/about/ValuesSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../../src/styles/about/ValuesSection.module.css";
+import "../../../src/styles/avix.css";
 
 const ValuesSection = () => {
   const values = useMemo(

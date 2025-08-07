@@ -1,7 +1,7 @@
 import { CheckCircle } from "lucide-react";
 import { useMemo } from "react";
-import styles from "@/styles/about/WhyChooseUsSection.module.css";
-import "@/styles/avix.css";
+import styles from "../../../src/styles/about/WhyChooseUsSection.module.css";
+import "../../../src/styles/avix.css";
 
 const WhyChooseUsSection = () => {
   const reasons = useMemo(
