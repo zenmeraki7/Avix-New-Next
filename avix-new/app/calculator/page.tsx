@@ -357,20 +357,26 @@ const EMICalculator = () => {
                 <p>🕒 Mon-Sat: 9 AM - 7 PM</p>
               </div>
 
-              <div className="space-y-3">
-                <Link href="/contact" passHref>
-                  <button className="w-full bg-white text-purple-700 py-3 px-4 rounded-lg font-medium hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
-                    <Phone size={18} />
-                    Get Expert Consultation
-                  </button>
-                </Link>
-                <Link
-                  href="/loans"
-                  className="w-full bg-purple-800 text-white py-3 px-4 rounded-lg font-medium hover:bg-purple-900 transition-colors text-center block"
-                >
-                  View All Loan Options
-                </Link>
-              </div>
+             <div className="space-y-3">
+  <div>
+    <Link href="/contact" passHref>
+      <button className="w-full bg-white text-purple-700 py-3 px-4 rounded-lg font-medium hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+        <Phone size={18} />
+        Get Expert Consultation
+      </button>
+    </Link>
+  </div>
+
+  <div>
+    <Link
+      href="/loans"
+      className="w-full bg-purple-800 text-white py-3 px-4 rounded-lg font-medium hover:bg-purple-900 transition-colors text-center block"
+    >
+      View All Loan Options
+    </Link>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
@@ -403,7 +409,7 @@ const EMICalculator = () => {
 
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div>
-                  <div className="text-4xl font-bold text-purple-600 mb-2">
+                  <div className="text-4xl font-bold text-purple-700 mb-2">
                     P
                   </div>
                   <div className="font-semibold text-purple-900 mb-2">
@@ -414,7 +420,7 @@ const EMICalculator = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-purple-600 mb-2">
+                  <div className="text-4xl font-bold text-purple-700 mb-2">
                     R
                   </div>
                   <div className="font-semibold text-purple-900 mb-2">
@@ -425,7 +431,7 @@ const EMICalculator = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-purple-600 mb-2">
+                  <div className="text-4xl font-bold text-purple-700 mb-2">
                     N
                   </div>
                   <div className="font-semibold text-purple-900 mb-2">
