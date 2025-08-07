@@ -81,7 +81,7 @@ console.log('Current pathname:', pathname);
               </div>
 
               <div className="flex flex-col">
-                <span className="text-2xl font-bold">AVIX</span>
+                <span className="text-2xl font-bold text-foreground leading-tight">AVIX</span>
                 <span className="text-xs text-gray-500 hidden sm:block">
                   Financial Services
                 </span>

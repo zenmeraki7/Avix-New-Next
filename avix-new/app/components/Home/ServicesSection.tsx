@@ -175,7 +175,7 @@ const ServicesSection = () => {
           "24/7 claims assistance support",
         ],
         icon: Shield,
-        link: "/insurance",
+        link: "/Insurance",
 
         badge: "Up to ₹1 Cr",
         startingRate: "₹999/year",

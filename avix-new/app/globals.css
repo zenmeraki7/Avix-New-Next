@@ -1,32 +1,115 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Custom font declarations for brand consistency */
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('/assets/fonts/libre-baskerville-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* Ensures text is always visible */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-sans: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; 
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('/assets/fonts/libre-baskerville-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
+@theme {
+  /* Exact footer colors matching your screenshot */
+  --color-primary: #2d1b69; /* Deep purple background from your image */
+  --color-primary-foreground: #ffffff; /* Pure white text */
+  --color-secondary: #4c2a85; /* Slightly lighter purple for logo background */
+  --color-secondary-foreground: #ffffff; /* White text on secondary */
+  
+  /* Base colors matching your React theme */
+  --color-background: #ffffff; /* White background from React */
+  --color-foreground: #1a202c; /* Dark gray text from React */
+  
+  /* UI colors */
+  --color-muted: #f7fafc;
+  --color-muted-foreground: #718096;
+  --color-accent: #f7fafc;
+  --color-accent-foreground: #1a202c;
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #2d1b69;
+  --color-card: #ffffff;
+  --color-card-foreground: #1a202c;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1a202c;
+  
+  /* Destructive colors */
+  --color-destructive: #e53e3e;
+  --color-destructive-foreground: #ffffff;
+  
+  /* Border radius */
+  --radius: 0.5rem;
+}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  /* CSS Reset + Critical Styles */
+  *, *::before, *::after {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+  
+  html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    /* Use Libre Baskerville first, then fallback to system serif fonts */
+    font-family: 'Libre Baskerville', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+#root {
+  min-height: 100vh;
+  background: #fff;
 }
 
+/* Loading state to prevent CLS */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
 
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Critical above-the-fold styles */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/bg.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Fallback for older browsers */
+.hero-section.no-avif {
+  background-image: url('/assets/bg.webp');
+}
+
+.hero-section.no-webp {
+  background-image: url('/assets/bg.jpg');
+}
+
+/* Marquee animations */
 @keyframes marquee-left {
   0% {
     transform: translateX(100%);
@@ -47,3 +130,32 @@ body {
   animation: marquee-left 15s linear infinite;
 }
 
+/* Force exact colors matching your screenshot */
+footer.bg-primary {
+  background-color: #2d1b69 !important; /* Deep purple matching your image */
+  color: #ffffff !important;
+}
+
+footer .bg-secondary {
+  background-color: #4c1ca0 !important; /* Logo background purple */
+}
+
+footer .text-primary-foreground {
+  color: #ffffff !important; /* Pure white text */
+}
+
+footer .text-primary-foreground\/80 {
+  color: rgba(255, 255, 255, 0.8) !important; /* 80% white for muted text */
+}
+
+footer .text-primary-foreground\/60 {
+  color: rgba(255, 255, 255, 0.6) !important; /* 60% white for copyright */
+}
+
+footer .border-primary-foreground\/20 {
+  border-color: rgba(255, 255, 255, 0.2) !important; /* 20% white for border */
+}
+
+footer .hover\:text-secondary:hover {
+  color: #6033e8 !important; /* Light purple for hover states */
+}

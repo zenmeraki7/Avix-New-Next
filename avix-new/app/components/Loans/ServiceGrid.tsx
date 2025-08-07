@@ -1,5 +1,5 @@
 import React, { FC, memo, useMemo } from "react";
-import  Link  from "next/link";
+import Link from "next/link";
 import {
   CreditCard,
   Car,
@@ -45,7 +45,7 @@ const RawServiceCard: FC<MSMEServiceCardProps> = ({ service, index }) => (
       <div className={styles.serviceAmount}>
         Amount: <span>{service.amount}</span>
       </div>
-      <Link href="/Contact" className={styles.serviceButton}>
+      <Link href="/contact" className={styles.serviceButton}>
         Apply Now
         <ArrowRight className={styles.serviceButtonIcon} />
       </Link>
