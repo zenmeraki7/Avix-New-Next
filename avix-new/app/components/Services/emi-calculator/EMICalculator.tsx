@@ -151,24 +151,7 @@ const EMICalculator = () => {
               </div>
             </div>
 
-            <div className={styles.actionButtons}>
-              <Button
-                variant="secondary"
-                size="sm"
-                className={styles.actionButton}
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download Report
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                className={styles.actionButton}
-              >
-                <Share2 className="w-4 h-4 mr-2" />
-                Share
-              </Button>
-            </div>
+           
           </CardContent>
         </Card>
 

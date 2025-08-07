@@ -243,16 +243,7 @@ const EMICalculator = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4 mt-8">
-                <button className="flex-1 bg-[#2b0052] text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-[#1e003d] transition-colors">
-                  <Download size={18} />
-                  Download Report
-                </button>
-                <button className="flex-1 bg-gray-100 text-gray-700 py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors">
-                  <Share2 size={18} />
-                  Share
-                </button>
-              </div>
+             
             </div>
 
             {/* Right Side - Results */}
