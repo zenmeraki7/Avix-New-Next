@@ -1,13 +1,19 @@
-"use client"
-import { useState, useEffect } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../../components/ui/card';
-import { Button } from '../../../components/ui/button';
-import { Label } from '../../../components/ui/label';
-import { Slider } from '../../../components/ui/slider';
-import { Calculator, Download, Share2 } from 'lucide-react';
-import styles from '../../../../src/styles/services/emi-calculator/EMICalculator.module.css';
-import '../../../../src/styles/services/emi-calculator/EMICalculator.module.css';
-import Link from 'next/link';
+"use client";
+import { useState, useEffect } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../../../components/ui/card";
+import { Button } from "../../../components/ui/button";
+import { Label } from "../../../components/ui/label";
+import { Slider } from "../../../components/ui/slider";
+import { Calculator, Download, Share2 } from "lucide-react";
+import styles from "../../../../src/styles/services/emi-calculator/EMICalculator.module.css";
+import "../../../../src/styles/services/emi-calculator/EMICalculator.module.css";
+import Link from "next/link";
 
 const EMICalculator = () => {
   const [loanAmount, setLoanAmount] = useState([500000]);
@@ -18,9 +24,8 @@ const EMICalculator = () => {
   const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
-  calculateEMI();
-}, [loanAmount, interestRate, tenure,]);
-
+    calculateEMI();
+  }, [loanAmount, interestRate, tenure]);
 
   const calculateEMI = () => {
     const principal = loanAmount[0];
@@ -33,8 +38,9 @@ const EMICalculator = () => {
       setTotalInterest(0);
       setTotalAmount(principal);
     } else {
-      const calculatedEMI = (principal * rate * Math.pow(1 + rate, months)) / 
-                           (Math.pow(1 + rate, months) - 1);
+      const calculatedEMI =
+        (principal * rate * Math.pow(1 + rate, months)) /
+        (Math.pow(1 + rate, months) - 1);
       const total = calculatedEMI * months;
       const interest = total - principal;
 
@@ -45,9 +51,9 @@ const EMICalculator = () => {
   };
 
   const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
+    return new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
       maximumFractionDigits: 0,
     }).format(amount);
   };
@@ -57,13 +63,16 @@ const EMICalculator = () => {
       <div className={styles.calculatorHeader}>
         <h1 className={styles.calculatorTitle}>EMI Calculator</h1>
         <p className={styles.calculatorDescription}>
-          Calculate your Equated Monthly Installment (EMI) for loans with our easy-to-use calculator.
+          Calculate your Equated Monthly Installment (EMI) for loans with our
+          easy-to-use calculator.
         </p>
       </div>
 
       <div className={styles.calculatorGrid}>
         {/* Calculator Form */}
-        <Card className={`${styles.formCard} avix-gradient-card avix-shadow-card`}>
+        <Card
+          className={`${styles.formCard} avix-gradient-card avix-shadow-card`}
+        >
           <CardHeader className={styles.formHeader}>
             <CardTitle className={styles.formTitle}>
               <Calculator className={`${styles.formIcon} avix-accent`} />
@@ -99,7 +108,9 @@ const EMICalculator = () => {
             {/* Interest Rate */}
             <div className={styles.inputGroup}>
               <div className={styles.inputHeader}>
-                <Label className={styles.inputLabel}>Interest Rate (per annum)</Label>
+                <Label className={styles.inputLabel}>
+                  Interest Rate (per annum)
+                </Label>
                 <span className={`${styles.inputValue} avix-accent`}>
                   {interestRate[0]}%
                 </span>
@@ -141,11 +152,19 @@ const EMICalculator = () => {
             </div>
 
             <div className={styles.actionButtons}>
-              <Button variant="secondary" size="sm" className={styles.actionButton}>
+              <Button
+                variant="secondary"
+                size="sm"
+                className={styles.actionButton}
+              >
                 <Download className="w-4 h-4 mr-2" />
                 Download Report
               </Button>
-              <Button variant="outline" size="sm" className={styles.actionButton}>
+              <Button
+                variant="outline"
+                size="sm"
+                className={styles.actionButton}
+              >
                 <Share2 className="w-4 h-4 mr-2" />
                 Share
               </Button>
@@ -154,7 +173,9 @@ const EMICalculator = () => {
         </Card>
 
         {/* Results */}
-        <Card className={`${styles.resultsCard} avix-gradient-primary avix-shadow-hero`}>
+        <Card
+          className={`${styles.resultsCard} avix-gradient-primary avix-shadow-hero`}
+        >
           <CardHeader className={styles.resultsHeader}>
             <CardTitle className={styles.resultsTitle}>EMI Breakdown</CardTitle>
             <CardDescription className={styles.resultsDescription}>
@@ -169,11 +190,15 @@ const EMICalculator = () => {
 
             <div className={styles.summaryGrid}>
               <div className={styles.summaryItem}>
-                <div className={styles.summaryAmount}>{formatCurrency(totalInterest)}</div>
+                <div className={styles.summaryAmount}>
+                  {formatCurrency(totalInterest)}
+                </div>
                 <div className={styles.summaryLabel}>Total Interest</div>
               </div>
               <div className={styles.summaryItem}>
-                <div className={styles.summaryAmount}>{formatCurrency(totalAmount)}</div>
+                <div className={styles.summaryAmount}>
+                  {formatCurrency(totalAmount)}
+                </div>
                 <div className={styles.summaryLabel}>Total Amount</div>
               </div>
             </div>
@@ -181,22 +206,41 @@ const EMICalculator = () => {
             <div className={styles.breakdownList}>
               <div className={styles.breakdownItem}>
                 <span className={styles.breakdownLabel}>Principal Amount:</span>
-                <span className={styles.breakdownValue}>{formatCurrency(loanAmount[0])}</span>
+                <span className={styles.breakdownValue}>
+                  {formatCurrency(loanAmount[0])}
+                </span>
               </div>
               <div className={styles.breakdownItem}>
                 <span className={styles.breakdownLabel}>Interest Amount:</span>
-                <span className={styles.breakdownValue}>{formatCurrency(totalInterest)}</span>
+                <span className={styles.breakdownValue}>
+                  {formatCurrency(totalInterest)}
+                </span>
               </div>
               <div className={styles.breakdownTotal}>
-                <span className={styles.breakdownTotalLabel}>Total Payable:</span>
-                <span className={styles.breakdownTotalValue}>{formatCurrency(totalAmount)}</span>
+                <span className={styles.breakdownTotalLabel}>
+                  Total Payable:
+                </span>
+                <span className={styles.breakdownTotalValue}>
+                  {formatCurrency(totalAmount)}
+                </span>
               </div>
             </div>
 
-            <Link href='/contact'>
-            <Button variant="secondary" className={styles.applyButton}>
-              Apply for This Loan
-            </Button>
+            <Link href="/contact">
+              <div className="flex justify-center">
+                <div className="flex justify-center">
+                  <div className="flex justify-center">
+                    <div className="flex justify-center">
+                      <Button
+                        variant="secondary"
+                        className="bg-[#3A1A6F] text-white hover:bg-[#2C1058] px-6 py-3 rounded-lg w-fit"
+                      >
+                        Apply for This Loan
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </Link>
           </CardContent>
         </Card>

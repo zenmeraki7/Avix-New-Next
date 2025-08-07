@@ -249,7 +249,6 @@ const Contact = () => {
     <>
       <style>{avixStyles}</style>
       <div className="min-h-screen bg-gray-50">
-
         {/* Hero Section */}
         <section className="py-24 avix-hero-bg text-white relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -310,7 +309,7 @@ const Contact = () => {
               <div>
                 <div className="mb-12">
                   <h2 className="text-4xl font-bold avix-text-gradient mb-4">
-                    Get Free Consultation
+                    Get Consultation
                   </h2>
                   <p className="text-xl text-gray-600">
                     Fill out the form below and our experts will contact you
@@ -432,7 +431,7 @@ const Contact = () => {
                         size="lg"
                       >
                         <Send className="w-5 h-5 mr-2" />
-                        Submit & Get Free Consultation
+                        Submit & Get Consultation
                       </Button>
                     </form>
                   </CardContent>
@@ -612,7 +611,6 @@ const Contact = () => {
             style={{ animationDelay: "3s" }}
           ></div>
         </section>
-
       </div>
     </>
   );
