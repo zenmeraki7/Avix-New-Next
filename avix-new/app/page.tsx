@@ -1,7 +1,7 @@
 //apps/page.ts - HomePage
 "use client";
 
-import { Suspense, lazy } from "react";
+import { Suspense } from "react";
 import HeroSection from "./components/Home/HeroSection"; 
 import StatsSection from "./components/Home/StatsSection";
 import ServicesSection from "./components/Home/ServicesSection";
