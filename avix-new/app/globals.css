@@ -110,14 +110,19 @@
 }
 
 /* Marquee animations */
-@keyframes marquee-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
+
+.animate-scroll {
+  animation: marquee 30s linear infinite;
+}
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+
 
 .marquee-wrapper {
   overflow: hidden;

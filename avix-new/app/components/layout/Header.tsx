@@ -32,24 +32,76 @@ console.log('Current pathname:', pathname);
 
   return (
     <>
-      {/* Announcement bar */}
-     {showAnnouncement && (
-  <div className="bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-700 text-white py-3 px-4 relative marquee-wrapper">
-    <div className="marquee-content">
-      <span className="inline-flex space-x-8 text-sm md:text-base font-medium items-center">
-        <span className="flex items-center space-x-2">
-          <Zap className="w-5 h-5 text-yellow-300 animate-pulse" />
-          <span>🎉 Personal Loans from</span>
-          <span className="font-bold text-yellow-300">9.99%*</span>
-          <span>| Approval in 24 Hours</span>
-        </span>
-        <span className="flex items-center space-x-2 ml-10">
-          <CreditCard className="w-5 h-5" />
-          <span>💰 Business Loans</span>
-          <span>| Fully Digital Process</span>
-        </span>
-      </span>
+   {showAnnouncement && (
+  <div className="bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-700 text-white py-3 px-4 relative overflow-hidden">
+    {/* Outer scroll container */}
+    <div className="overflow-hidden whitespace-nowrap">
+      {/* Inner scrolling row */}
+      <div className="inline-block animate-scroll">
+        
+        {/* First copy of content */}
+        <span className="inline-flex space-x-8 text-sm md:text-base font-medium items-center">
+          <span className="flex items-center space-x-2">
+            <Zap className="w-5 h-5 text-yellow-300 animate-pulse" />
+             <span>🎉 Limited Time Offer: Personal Loans starting from</span>
+                    <span className="font-bold text-yellow-300">9.99%*</span>
+                    <span>| Quick Approval in 24 Hours</span>
+                  </span>
+                  
+                  <span className="flex items-center space-x-2">
+                    <CreditCard className="w-5 h-5 text-white/90" />
+                    <span>💰 Business Loans from</span>
+                    <span className="font-bold text-yellow-300">9.99%*</span>
+                    <span>| Fully Digital Processing</span>
+                  </span>
+                  
+                  <span className="flex items-center space-x-2">
+                    <TrendingUp className="w-5 h-5 text-white/90" />
+                    <span>🏠 Home Loans with low Processing Fee</span>
+                    <span>| Up to ₹5 Crore</span>
+                  </span>
+                  
+                  <span className="flex items-center space-x-2">
+                    {/* <Calculator className="w-5 h-5 text-white/90" /> */}
+                    <span>📱 Free EMI Calculator</span>
+                    <span>| Plan Your Finances</span>
+                  </span>
+                </span>
+                
+
+        {/* Second copy of content for loop */}
+        <span className="inline-flex items-center space-x-8 text-sm md:text-base font-medium ml-8">
+                  <span className="flex items-center space-x-2">
+                    <Zap className="w-5 h-5 text-yellow-300 avix-pulse" />
+                    <span>🎉 Limited Time Offer: Personal Loans starting from</span>
+                    <span className="font-bold text-yellow-300">9.99%*</span>
+                    <span>| Quick Approval in 24 Hours</span>
+                  </span>
+                  
+                  <span className="flex items-center space-x-2">
+                    <CreditCard className="w-5 h-5 text-white/90" />
+                    <span>💰 Business Loans from</span>
+                    <span className="font-bold text-yellow-300">9.99%*</span>
+                    <span>| Commplete Digital Processing</span>
+                  </span>
+                  
+                  <span className="flex items-center space-x-2">
+                    <TrendingUp className="w-5 h-5 text-white/90" />
+                    <span>🏠 Home Loans with Low Processing Fee</span>
+                    <span>| Up to ₹5 Crore</span>
+                  </span>
+                  
+                  <span className="flex items-center space-x-2">
+                    <Calculator className="w-5 h-5 text-white/90" />
+                    <span>📱 Free EMI Calculator</span>
+                    <span>| Plan Your Finances</span>
+                  </span>
+                </span>
+
+      </div>
     </div>
+
+    {/* Close Button */}
     <Button
       variant="ghost"
       size="sm"

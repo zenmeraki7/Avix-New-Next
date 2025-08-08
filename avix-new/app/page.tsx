@@ -3,14 +3,15 @@
 
 import { Suspense, lazy } from "react";
 import HeroSection from "./components/Home/HeroSection"; 
+import StatsSection from "./components/Home/StatsSection";
+import ServicesSection from "./components/Home/ServicesSection";
+import WhyChooseUsSection from "./components/Home/WhyChooseUsSection";
+import TrustedPartnersSection from "./components/Home/TrustedPartnersSection";
+import InsurancePartnersSection from "./components/Home/InsurancePartnersSection";
+import TestimonialsSection from "./components/Home/TestimonialsSection";
+import CTASection from "./components/Home/CTASection";
 
-const StatsSection = lazy(() => import("./components/Home/StatsSection"));
-const ServicesSection = lazy(() => import("./components/Home/ServicesSection"));
-const WhyChooseUsSection = lazy(() => import("./components/Home/WhyChooseUsSection"));
-const TrustedPartnersSection = lazy(() => import("./components/Home/TrustedPartnersSection"));
-const InsurancePartnersSection = lazy(() => import("./components/Home/InsurancePartnersSection"));
-const TestimonialsSection = lazy(() => import("./components/Home/TestimonialsSection"));
-const CTASection = lazy(() => import("./components/Home/CTASection"));
+
 
 export default function Home() {
   return (
