@@ -138,7 +138,7 @@ const Contact = () => {
     service: "",
     message: "",
   });
-
+// form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -181,7 +181,6 @@ const Contact = () => {
       setIsLoading(false);
     }
   };
-
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
