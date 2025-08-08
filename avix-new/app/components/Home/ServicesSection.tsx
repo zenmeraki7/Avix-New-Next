@@ -1,5 +1,5 @@
 //apps/components/Home/ServicesSection
-
+"use client"
 import Link from "next/link";
 import { Button } from "../ui/button";
 
@@ -21,7 +21,7 @@ import {
   Zap,
   Clock,
 } from "lucide-react";
-import { memo, useMemo } from "react";
+import { memo, useMemo, useState } from "react";
 import styles from "../../../src/styles/home/ServicesSection.module.css";
 import "../../../src/styles/avix.css";
 
@@ -49,22 +49,32 @@ const ModernServiceCard = memo(function ModernServiceCard({
   service,
   index,
 }: ModernServiceCardProps) {
-  const isPopular = service.popular;
+  const [expanded, setExpanded] = useState(false);
+
+  const truncatedDescription =
+    service.description.length > 50
+      ? service.description.slice(0, 100) + "..."
+      : service.description;
+
+  const toggleExpanded = () => setExpanded((prev) => !prev);
 
   return (
     <Card
-      className={`group ${styles.serviceCard} avix-gradient-card avix-shadow-card hover:avix-shadow-hero ${
-        isPopular ? "ring-2 ring-purple-200/50" : ""
+      className={`group ${
+        styles.serviceCard
+      } avix-gradient-card avix-shadow-card hover:avix-shadow-hero ${
+        service.popular ? "ring-2 ring-purple-200/50" : ""
       }`}
       style={{ animationDelay: `${index * 150}ms` }}
     >
       {/* Popular Badge */}
-      {isPopular && (
+      {service.popular && (
         <div className={`${styles.popularBadge} avix-popular-badge`}>
           <Zap className="w-3 h-3 mr-1" />
           Most Popular
         </div>
       )}
+
 
       <CardHeader className={styles.serviceHeader}>
         <div className={styles.serviceHeaderTop}>
@@ -81,11 +91,17 @@ const ModernServiceCard = memo(function ModernServiceCard({
           </div>
         </div>
 
-        <CardTitle className={styles.serviceTitle}>
-          {service.title}
-        </CardTitle>
+        <CardTitle className={styles.serviceTitle}>{service.title}</CardTitle>
         <CardDescription className={styles.serviceDescription}>
-          {service.description}
+          {expanded ? service.description : truncatedDescription}
+          {service.description.length > 100 && (
+            <button
+              onClick={toggleExpanded}
+              className="text-[#8A1C9D] ml-1 underline hover:opacity-80 transition"
+            >
+              {expanded ? "Read Less" : "Read More"}
+            </button>
+          )}
         </CardDescription>
       </CardHeader>
 
