@@ -124,7 +124,7 @@ console.log('Current pathname:', pathname);
             <Link href="/" className="flex items-center space-x-3">
               <div className="relative w-12 h-12 rounded-xl bg-gradient-to-tr from-indigo-900 via-purple-800 to-pink-700 p-1 shadow-lg">
                 <Image
-                  src="/assets/AvixLogo.png"
+                  src="/assets/AvixLogo.webp"
                   alt="AVIX Logo"
                   fill
                   sizes="48px"
