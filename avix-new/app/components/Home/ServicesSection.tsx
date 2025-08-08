@@ -44,7 +44,7 @@ interface ModernServiceCardProps {
   index: number;
 }
 
-// Memoized Modern Service Card Component with AVIX Theme
+// Memoized Modern Service Card Component with AVIX Theme and read more functionality
 const ModernServiceCard = memo(function ModernServiceCard({
   service,
   index,
