@@ -42,7 +42,7 @@ const WhyChooseUsSection = () => {
           </div>
           <div className={styles.whyChooseUsImage}>
             <Image
-              src={"/assets/family.png"}
+              src={"/assets/family.webp"}
               alt="Financial Services Overview"
               className="avix-shadow-hero"
               width={576}

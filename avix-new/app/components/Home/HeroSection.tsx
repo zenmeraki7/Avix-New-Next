@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div
         className={styles.heroBackground}
         style={{
-          backgroundImage: `url("/assets/bg.png")`,
+          backgroundImage: `url("/assets/bg.webp")`,
         }}
       >
         <div className={`${styles.heroOverlay} avix-gradient-primary`} />
