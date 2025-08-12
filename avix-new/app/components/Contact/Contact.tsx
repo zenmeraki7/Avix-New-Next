@@ -39,7 +39,6 @@ import {
   Award,
 } from "lucide-react";
 
-
 // Enhanced AVIX Brand Styles
 const avixStyles = `
   .avix-gradient-primary {
@@ -139,7 +138,13 @@ const Contact = () => {
     service: "",
     message: "",
   });
-// form submission
+  const isFormValid =
+    formData.email.trim() !== "" &&
+    formData.name.trim() !== "" &&
+    formData.phone.trim() !== "" &&
+    formData.service.trim() !== "";
+
+  // form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -280,7 +285,7 @@ const Contact = () => {
         "You can track your application status by calling our customer service at +91 99468 41656 or visiting our office. We provide regular updates via SMS and calls.",
     },
   ];
-
+  
   return (
     <>
       <style>{avixStyles}</style>
@@ -463,7 +468,7 @@ const Contact = () => {
 
                       <Button
                         type="submit"
-                        disabled={isLoading}
+                        disabled={isLoading || !isFormValid}
                         className="w-full avix-gradient-primary hover:avix-primary-hover text-white border-0 p-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 avix-shadow-elegant"
                         size="lg"
                       >
