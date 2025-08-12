@@ -16,16 +16,16 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
-  title: 'AVIX Financial Services – Your Trusted Financial Partner',
+  title: 'AVIX Financial Solutions – Where Financial Clarity Begins',
   description: 'Comprehensive financial solutions including personal loans, business loans, home loans, insurance, mutual funds, and investment advisory. Quick approvals, competitive rates.',
-  authors: [{ name: 'AVIX Financial Services' }],
+  authors: [{ name: 'AVIX Financial Solutions' }],
   metadataBase: new URL('https://avixfinancialsolutions.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
-    title: 'AVIX Financial Services – Your Trusted Financial Partner',
+    title: 'AVIX Financial Solutions – Where Financial Clarity Begins',
     description: 'Where Financial Clarity Begins - Quick approvals on personal, home, and business loans – plus insurance, mutual funds & advisory.',
     url: 'https://avixfinancialsolutions.com/',
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: '/assets/avix.webp',
         width: 1200,
         height: 630,
-        alt: 'AVIX Financial Services',
+        alt: 'AVIX Financial Solutions',
       },
     ],
   },

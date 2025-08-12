@@ -9,9 +9,9 @@ import CTASection from "../components/Home/CTASection";
 
 // Page-specific SEO
 export const metadata: Metadata = {
-  title: 'About AVIX Financial Services',
+  title: 'About AVIX Financial Solutions',
   description:
-    'Discover AVIX Financial Services — our mission, values, and dedication to delivering trusted financial solutions including loans, insurance, and investment advisory across India.',
+    'Discover AVIX Financial Solutions — our mission, values, and dedication to delivering trusted financial solutions including loans, insurance, and investment advisory across India.',
   alternates: {
     canonical: '/about',
   },

@@ -5,7 +5,7 @@ import WhyInvestSection from "../components/Investment/WhyInvestSection";
 import CTASection from "../components/Investment/CTASection";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: 'Investment Solutions – AVIX Financial Services',
+  title: 'Investment Solutions – AVIX Financial Solutions',
   description:
     'Grow your wealth with expert investment strategies. Mutual funds, SIPs, and advisory services tailored to your financial goals.',
   alternates: { canonical: '/investment' },
