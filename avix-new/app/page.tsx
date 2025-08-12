@@ -11,9 +11,8 @@ import InsurancePartnersSection from "./components/Home/InsurancePartnersSection
 import TestimonialsSection from "./components/Home/TestimonialsSection";
 import CTASection from "./components/Home/CTASection";
 
-
-
 export default function Home() {
+  
   return (
     <>
       <HeroSection />
